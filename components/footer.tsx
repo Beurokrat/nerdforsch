@@ -8,9 +8,9 @@ const Footer = () => {
       <Container>
       <div className='grid md:grid-cols-6 md:grid-rows-3 gap-4 pt-10 sm:grid-cols-3 sm:grid-rows-3'>
         <div className='col-span-3 md:row-span-2'>
-          <h3 className='text-2xl font-bold tracking-tighter leading-tight lg:text-left md:mb-10 lg:mb-0 lg:pr-4 lg:w-1/2'>
+          <h1 className='text-lg pb-4 font-semi-bold tracking-tighter leading-tight lg:text-left md:mb-10 lg:mb-0 lg:pr-4 lg:w-1/2'>
             Nerdforsch Labs pvt. ltd.
-          </h3>
+          </h1>
           <p className='sm:text-xs md:text-base'>Ten Square Building,</p>
           <p className='sm:text-xs md:text-base'>NH-47 ,Ernakulam</p>
           <p className='sm:text-xs md:text-base'>Kerala, India</p>
