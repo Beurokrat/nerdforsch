@@ -26,7 +26,7 @@ const Intro = () => {
         <div className='h-screen sm:pt-20 grid grid-cols-1 grid-rows-3 gap-4'>
           
           <div className='h-full row-start-1 row-span-2'>
-            <h3 className='sm:p-10 sm:pt-0 md:p-20 sm:text-2xl md:text-4xl text-gray-200 font-bold tracking-wider md:pr-15 md:pl-0'>
+            <h3 className='sm:p-0 sm:pt-0 md:p-20 sm:text-2xl md:text-4xl text-gray-200  tracking-wider md:pr-15 md:pl-0'>
             <br></br>
               We integrate different perspectives, collaborate with one another,
               and challenge ourselves to think outside the
