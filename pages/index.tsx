@@ -16,7 +16,7 @@ export default function Index({ allPosts }: Props) {
   const heroPost = allPosts[0]
   let morePosts = allPosts.slice(2)
   morePosts[0].coverImage = '/assets/img/blog-1.png'
-  return (
+    return (
     <>
       <Layout>
         <Head>
@@ -24,8 +24,10 @@ export default function Index({ allPosts }: Props) {
         </Head>
         <Container>
           <ShowReel/>
-          {/* <Intro />
-          {morePosts.length > 0 && <MoreStories posts={morePosts} />} */}
+        </Container>
+          <Intro />
+        <Container>
+          {morePosts.length > 0 && <MoreStories posts={morePosts} />}
         </Container>
       </Layout>
     </>

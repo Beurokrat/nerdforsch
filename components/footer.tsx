@@ -3,7 +3,7 @@ import { EXAMPLE_PATH } from '../lib/constants';
 
 const Footer = () => {
   return (
-    <footer className='bg-neutral-50 border-t border-neutral-200'>
+    <footer className='border-t border-neutral-200 bg-black text-gray-200'>
 
       <Container>
       <div className='grid md:grid-cols-6 md:grid-rows-3 gap-4 pt-10 sm:grid-cols-3 sm:grid-rows-3'>
@@ -32,7 +32,7 @@ const Footer = () => {
           <p className='sm:text-xs md:text-base'>Instagram</p>
           <p className='sm:text-xs md:text-base'>LinkdIn</p>
         </div>
-        <div className='md:col-span-6 md:row-start-3 border-t-2 border-gray-300 text-gray-500 text-sm py-4 sm:col-span-3'>
+        <div className='md:col-span-6 md:row-start-3 border-t-2 border-gray-300 text-gray-200 text-sm py-4 sm:col-span-3'>
           &copy; 2023 Nerdforsch Labs pvt. ltd. All rights reserved. Powered by Beurokrat
         </div>
       </div>

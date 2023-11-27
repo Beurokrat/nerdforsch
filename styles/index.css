@@ -84,6 +84,16 @@ body {
   background-repeat: repeat; /* Repeat the image both vertically and horizontally */
 }
 
+/* .aboutTitle {
+  font-size: clamp(80px, 24vw, 150px);
+  line-height: 1;
+} */
+
+.section2 {
+  background-image: url('/assets/img/section2bg.jpg');
+  background-size: cover;
+  background-position: center;
+}
 .clipped-corners {
   clip-path: polygon(
     calc(0% + 7rem) 0%,
