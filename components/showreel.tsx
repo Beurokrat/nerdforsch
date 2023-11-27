@@ -28,7 +28,7 @@ export default function ShowReel() {
         </div>
         <div className='md:col-start-3 md:row-start-4 sm:row-start-6 h-full items-center'>
           <h4 className=' md:text-left sm:text-2xl md:text-4xl md:mt-5 md:pl-4 md:pt-12'>
-            <b className='text-red-600'>Advertisement</b> is now in motion.
+            <b>Advertisement</b> is now in motion.
             {/* <b className='text-red-800'> a</b>.
             <b className='text-green-800'>k</b>.
             <b className='text-blue-800'>a</b> */}
