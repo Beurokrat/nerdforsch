@@ -23,10 +23,9 @@ export default function Index({ allPosts }: Props) {
           <title>{`Nerdforsch Labs - Next Gen marketing platform`}</title>
         </Head>
         <Container>
-          <Header />
           <ShowReel/>
-          <Intro />
-          {morePosts.length > 0 && <MoreStories posts={morePosts} />}
+          {/* <Intro />
+          {morePosts.length > 0 && <MoreStories posts={morePosts} />} */}
         </Container>
       </Layout>
     </>
