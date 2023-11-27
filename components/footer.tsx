@@ -11,26 +11,26 @@ const Footer = () => {
           <h3 className='text-2xl font-bold tracking-tighter leading-tight lg:text-left md:mb-10 lg:mb-0 lg:pr-4 lg:w-1/2'>
             Nerdforsch Labs pvt. ltd.
           </h3>
-          <p>Ten Square Building,</p>
-          <p>NH-47 ,Ernakulam</p>
-          <p>Kerala, India</p>
+          <p className='sm:text-xs md:text-base'>Ten Square Building,</p>
+          <p className='sm:text-xs md:text-base'>NH-47 ,Ernakulam</p>
+          <p className='sm:text-xs md:text-base'>Kerala, India</p>
         </div>
         <div className='md:row-span-2 md:col-start-4'>
-          <p className='text-lg'><b>Help</b></p>
-          <p>Contact Us</p>
-          <p>Help & FAQs</p>
+          <p className='md:text-lg sm:text-sm'><b>Help</b></p>
+          <p className='sm:text-xs md:text-base'>Contact Us</p>
+          <p className='sm:text-xs md:text-base'>Help & FAQs</p>
         </div>
         <div className='md:row-span-2 md:col-start-5'>
-        <p className='text-lg'><b>Legal Info</b></p>
-          <p>Privacy Policy</p>
-          <p>Terms & Conditions</p>
-          <p>Cookie Policy</p>
+        <p className='md:text-lg sm:text-sm '><b>Legal Info</b></p>
+          <p className='sm:text-xs md:text-base'>Privacy Policy</p>
+          <p className='sm:text-xs md:text-base'>Terms & Conditions</p>
+          <p className='sm:text-xs md:text-base'>Cookie Policy</p>
         </div>
         <div className='md:row-span-2 md:col-start-6'>
-        <p className='text-lg'><b>Follow Us</b></p>
-          <p>Facebook</p>
-          <p>Instagram</p>
-          <p>LinkdIn</p>
+        <p className='md:text-lg sm:text-sm'><b>Follow Us</b></p>
+          <p className='sm:text-xs md:text-base'>Facebook</p>
+          <p className='sm:text-xs md:text-base'>Instagram</p>
+          <p className='sm:text-xs md:text-base'>LinkdIn</p>
         </div>
         <div className='md:col-span-6 md:row-start-3 border-t-2 border-gray-300 text-gray-500 text-sm py-4 sm:col-span-3'>
           &copy; 2023 Nerdforsch Labs pvt. ltd. All rights reserved. Powered by Beurokrat
