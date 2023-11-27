@@ -79,6 +79,10 @@
 p {
   /* font-family: 'Roboto Mono', monospace; */
 }
+body {
+  background-image: url('/assets/img/bg.png'); /* Replace 'your-image.jpg' with your image URL */
+  background-repeat: repeat; /* Repeat the image both vertically and horizontally */
+}
 
 .clipped-corners {
   clip-path: polygon(
