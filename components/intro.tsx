@@ -1,12 +1,3 @@
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from '@/components/ui/card';
-
 const Intro = () => {
   return (
     <section className='h-screen flex-col sm:flex-row flex items-center md:justify-between mt-16 mb-16 md:mb-12'>
