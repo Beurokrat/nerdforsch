@@ -153,7 +153,6 @@ const Slider = () => {
             </button>
             <button
               className='pixel-font md:text-2xl mx-auto md:pd-4 p-1 pr-3 pl-3'
-              onTouchStart={() => nextSlide()}
               onClick={() => nextSlide()}
             >
               Next
