@@ -15,12 +15,12 @@ const Intro = () => {
     if (el.current) {
       gsap.registerPlugin(ScrollTrigger);
       gsap.to('.aboutTitle', {
-        xPercent: -60,
+        xPercent: -10,
         scrollTrigger: {
           trigger: el.current,
-          start: 'top 100%',
+          start: 'top 70%',
           end: 'bottom top',
-          scrub: 0.5,
+          scrub: 2,
         },
       });
     }
@@ -30,11 +30,11 @@ const Intro = () => {
     <section ref={el} className='overflow-hidden relative'>
       <Container>
         <div
-          className='sm:pt-0 opacity-40 absolute'
+          className='sm:pt-0 absolute'
           style={{ marginTop: '250px', zIndex: '-5' }}
         >
           <div className='w-full px-4'>
-            <h2 className='aboutTitle sm:text-7xl md:text-4xl font-bold tracking-tighter whitespace-nowrap font-archia '>
+            <h2 className='aboutTitle sm:text-7xl md:text-8xl font-bold text-gray-400 tracking-tighter whitespace-nowrap font-archia '>
               <span>#innovation </span>
               <span>#CreativeMarketing </span>
               <span>#Collaboration </span>
@@ -60,14 +60,14 @@ const Intro = () => {
           <h4 className='mt-5 md:text-left sm:text-sm md:text-2xl'>SERVICES</h4>
         </div>
         <div className='md:p-10 flex sm:flex-col md:flex-row w-full'>
-          <div className='m-10 ml-0 md:w-1/2 sm:w-full sm:p-3 rounded-xl shadow-xl bg-grey-800 bg-opacity-70 backdrop-blur-lg backdrop-filter'>
-            <h3 className='m-10 sm:text-3xl mt-5 font-semi-bold'>
+          <div className='m-10 ml-0 md:w-1/2 sm:w-full sm:p-5 rounded-xl shadow-xl bg-grey-800 bg-opacity-70 backdrop-blur-lg backdrop-filter'>
+            <h3 className='md:m-10 sm:m-3 sm:text-3xl mt-5 font-semi-bold'>
               Featuring new era of{' '}
               <span className='pixel-font font-normal'>
                 offline advertising ?
               </span>
             </h3>
-            <p className='md:m-10 pr-8 sm:text-base md:text-lg '>
+            <p className='md:m-10 sm:m-3 pr-8 sm:text-base md:text-lg '>
               It's like traditional billboards, but our ads move! We put
               high-res LED screens on trucks or trailers that showcase
               eye-catching ads on the go. Lorem, ipsum dolor sit amet
@@ -75,7 +75,7 @@ const Intro = () => {
             </p>
           </div>
 
-          <div className='m-10 ml-0 p-5 md:w-1/2 sm:w-full sm:p-3 rounded-xl shadow-xl bg-grey-800 bg-opacity-70 backdrop-blur-lg backdrop-filter'>
+          <div className='m-10 ml-0 md:p-8 md:w-1/2 sm:w-full sm:p-8 rounded-xl shadow-xl bg-grey-800 bg-opacity-70 backdrop-blur-lg backdrop-filter'>
             <Accordion type='single' collapsible>
               <AccordionItem value='item-1'>
                 <AccordionTrigger>

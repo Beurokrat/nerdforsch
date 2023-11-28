@@ -10,7 +10,7 @@ const Slider = () => {
   const fadeInSlide = (index, slides) => {
     gsap.to(slides[index], {
       opacity: 1,
-      duration: 0.5,
+      duration: 0.2,
       ease: 'power1.inOut',
     });
   };
@@ -18,7 +18,7 @@ const Slider = () => {
   const fadeOutSlide = (index, slides) => {
     gsap.to(slides[index], {
       opacity: 0,
-      duration: 0.5,
+      duration: 0.2,
       ease: 'power1.inOut',
     });
   };
