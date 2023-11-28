@@ -17,9 +17,9 @@ export default function ShowReel() {
           </div>
         </div>
         <div className='md:col-span-2 md:row-start-4 sm:row-start-5 sm:pt-5 sm:pb-0 items-center'>
-          <h4 className='md:text-left sm:text-xl md:text-3xl mt-5'>
+          <h3 className='md:text-left sm:text-xl md:text-3xl mt-5'>
             Introducing
-          </h4>
+          </h3>
           <h1 className='pt-4 sm:text-4xl md:text-8xl font-bold tracking-tighter leading-tight md:pr-8'>
             {/* Your <span className='text-red-600'>advertisement</span> is now in motion. */}
             {/* 👋 .. hello !<br></br> */}
@@ -27,12 +27,8 @@ export default function ShowReel() {
           </h1>
         </div>
         <div className='md:col-start-3 md:row-start-4 sm:row-start-6 h-full items-center'>
-          <h4 className=' md:text-left sm:pt-4 sm:text-xl md:mt-5 md:pl-4 md:pt-12'>
+          <h4 className=' md:text-left sm:pt-4 sm:text-xl md:text-2xl md:mt-5 md:pl-4 md:pt-12'>
             <b>Advertisement</b> is now in motion_
-            {/* <b className='text-red-800'> a</b>.
-            <b className='text-green-800'>k</b>.
-            <b className='text-blue-800'>a</b> */}
-             {/* eMotion. */}
           </h4>
         </div>
       </div>

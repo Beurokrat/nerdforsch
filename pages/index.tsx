@@ -1,37 +1,41 @@
-import Container from '../components/container'
-import MoreStories from '../components/more-stories'
-import Intro from '../components/intro'
-import Layout from '../components/layout'
-import { getAllPosts } from '../lib/api'
-import Head from 'next/head'
-import Post from '../interfaces/post'
-import Header from '../components/header'
-import ShowReel from '../components/showreel'
+import Container from '../components/container';
+import MoreStories from '../components/more-stories';
+import Intro from '../components/intro';
+import Layout from '../components/layout';
+import { getAllPosts } from '../lib/api';
+import Head from 'next/head';
+import Post from '../interfaces/post';
+import Header from '../components/header';
+import ShowReel from '../components/showreel';
+import Slider from '../components/slider';
+
 
 type Props = {
-  allPosts: Post[]
-}
+  allPosts: Post[];
+};
 
 export default function Index({ allPosts }: Props) {
-  const heroPost = allPosts[0]
-  let morePosts = allPosts.slice(2)
-  morePosts[0].coverImage = '/assets/img/blog-1.png'
-    return (
+  const heroPost = allPosts[0];
+  let morePosts = allPosts.slice(2);
+  morePosts[0].coverImage = '/assets/img/blog-1.png';
+
+  return (
     <>
       <Layout>
         <Head>
           <title>{`Nerdforsch Labs - Next Gen marketing platform`}</title>
         </Head>
         <Container>
-          <ShowReel/>
+          <ShowReel />
         </Container>
-          <Intro />
+        <Slider />
+        {/* <Intro /> */}
         <Container>
           {morePosts.length > 0 && <MoreStories posts={morePosts} />}
         </Container>
       </Layout>
     </>
-  )
+  );
 }
 
 export const getStaticProps = async () => {
@@ -42,9 +46,9 @@ export const getStaticProps = async () => {
     'author',
     'coverImage',
     'excerpt',
-  ])
+  ]);
 
   return {
     props: { allPosts },
-  }
-}
+  };
+};
