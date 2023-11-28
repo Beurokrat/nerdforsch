@@ -1,3 +1,4 @@
+'use client';
 import Container from '../components/container';
 import MoreStories from '../components/more-stories';
 import Intro from '../components/intro';
@@ -8,7 +9,8 @@ import Post from '../interfaces/post';
 import Header from '../components/header';
 import ShowReel from '../components/showreel';
 import Slider from '../components/slider';
-
+import Lenis from '@studio-freight/lenis'
+import {useEffect} from 'react';
 
 type Props = {
   allPosts: Post[];
@@ -17,8 +19,17 @@ type Props = {
 export default function Index({ allPosts }: Props) {
   const heroPost = allPosts[0];
   let morePosts = allPosts.slice(2);
-  morePosts[0].coverImage = '/assets/img/blog-1.png';
-
+  morePosts[0].coverImage = '/assets/img/blog-1.png';  
+  useEffect(()=>{
+    const lenis = new Lenis({
+      duration:1.3
+    })
+    function raf(time) {
+      lenis.raf(time)
+      requestAnimationFrame(raf)
+    }
+    requestAnimationFrame(raf)
+  },[])
   return (
     <>
       <Layout>
@@ -29,7 +40,7 @@ export default function Index({ allPosts }: Props) {
           <ShowReel />
         </Container>
         <Slider />
-        {/* <Intro /> */}
+        <Intro />
         <Container>
           {morePosts.length > 0 && <MoreStories posts={morePosts} />}
         </Container>
