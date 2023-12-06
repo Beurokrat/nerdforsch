@@ -20,8 +20,11 @@ import { Textarea } from "./ui/textarea"
 
 
 const FormSchema = z.object({
-  username: z.string().min(2, {
-    message: "Username must be at least 2 characters.",
+  fullname: z.string().min(2, {
+    message: "Message cannot be empty",
+  }),
+  contact: z.string().min(2, {
+    message: "Message cannot be empty",
   }),
 })
 
@@ -29,11 +32,13 @@ export function ContactForm() {
   const form = useForm<z.infer<typeof FormSchema>>({
     resolver: zodResolver(FormSchema),
     defaultValues: {
-      username: "",
+      fullname: "",
+      contact: "",
     },
   })
 
   function onSubmit(data: z.infer<typeof FormSchema>) {
+    console.log("btn click")
     toast({
       title: "You submitted the following values:",
       description: (
@@ -52,12 +57,12 @@ export function ContactForm() {
 
         <FormField
           control={form.control}
-          name="username"
+          name="fullname"
           render={({ field }) => (
             <FormItem>
               <FormLabel>Full name</FormLabel>
               <FormControl>
-                <Input placeholder="shadcn" {...field} />
+                <Input {...field} />
               </FormControl>
               {/* <FormDescription>
                 This is your public display name.
@@ -71,12 +76,12 @@ export function ContactForm() {
 
         <FormField
           control={form.control}
-          name="username"
+          name="contact"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Full name</FormLabel>
+              <FormLabel>email / Phone</FormLabel>
               <FormControl>
-                <Input placeholder="shadcn" {...field} />
+                <Input {...field} />
               </FormControl>
               {/* <FormDescription>
                 This is your public display name.
