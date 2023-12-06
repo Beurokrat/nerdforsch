@@ -18,7 +18,7 @@ type Props = {
 
 export default function Index({ allPosts }: Props) {
   const heroPost = allPosts[0];
-  let morePosts = allPosts.slice(2);
+  let morePosts = allPosts;
   morePosts[0].coverImage = '/assets/img/blog-1.png';  
   useEffect(()=>{
     const lenis = new Lenis({
@@ -42,7 +42,7 @@ export default function Index({ allPosts }: Props) {
         <Slider />
         <Intro />
         <Container>
-          {morePosts.length > 0 && <MoreStories posts={morePosts} />}
+          {/* {morePosts.length > 0 && <MoreStories posts={morePosts} />} */}
         </Container>
       </Layout>
     </>

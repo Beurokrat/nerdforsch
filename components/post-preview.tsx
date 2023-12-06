@@ -22,7 +22,7 @@ const PostPreview = ({
   slug,
 }: Props) => {
   return (
-    <div>
+    <div className='m-5 p-5 rounded-2xl shadow-md border-3 bg-gray-100 hover:shadow-2xl transition-shadow duration-200'>
       <div className="mb-5">
         <CoverImage slug={slug} title={title} src={coverImage} />
       </div>
