@@ -11,6 +11,7 @@ import ShowReel from '../components/showreel';
 import Slider from '../components/slider';
 import Lenis from '@studio-freight/lenis'
 import {useEffect} from 'react';
+import About from '../components/about';
 
 type Props = {
   allPosts: Post[];
@@ -39,7 +40,8 @@ export default function Index({ allPosts }: Props) {
         <Container>
           <ShowReel />
         </Container>
-        <Slider />
+        {/* <Slider /> */}
+        <About />
         <Intro />
         <Container>
           {/* {morePosts.length > 0 && <MoreStories posts={morePosts} />} */}
