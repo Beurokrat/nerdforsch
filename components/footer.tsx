@@ -1,22 +1,10 @@
 'use client';
 import Container from './container';
-import { EXAMPLE_PATH } from '../lib/constants';
-import { Input } from './ui/input';
-import {
-  Form,
-  FormControl,
-  FormDescription,
-  FormField,
-  FormItem,
-  FormLabel,
-  FormMessage,
-} from './ui/form';
 
 import * as z from 'zod';
 
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useForm } from 'react-hook-form';
-import { ContactForm } from './contactform';
 
 const Footer = () => {
   const formSchema = z.object({
@@ -33,7 +21,7 @@ const Footer = () => {
     <footer className='footer border-t border-neutral-200 bg-black text-gray-200'>
       <Container>
         <div className='pt-10 flex sm:flex-col md:flex-row  items-center'>
-            <img src='/assets/img/logo-astro.png' className='md:w-1/4 sm:w-1/2' alt='' />
+            <img src='/assets/img/logo-astro.png' className='w-1/4' alt='' />
           <div className='flex float-right sm:p5 sm:mb-10 md:p-10 sm:w-full bg-black shadow-xl rounded-3xl bg-opacity-30 backdrop-blur-lg backdrop-filter'>
             <div className='m-5 mr-auto w-full'>
               <h1 className='sm:text-xl md:text-3xl pb-4 font-semi-bold tracking-tighter leading-tight lg:text-left'>
