@@ -84,7 +84,7 @@ const Slider = () => {
                 <h4 className='md:mt-5 md:text-left sm:text-center sm:text-lg md:text-2xl'>
                   STEP 1
                 </h4>
-                <h3 className='m-10 sm:text-5xl mt-5 font-semi-bold text-center'>
+                <h3 className='m-10 sm:text-4xl md:text-5xl mt-5 font-semi-bold text-center'>
                   Featuring new era of{' '}
                   <span className='pixel-font font-normal'>
                     offline advertising.
@@ -103,7 +103,7 @@ const Slider = () => {
                 <h4 className='mt-5 md:text-left sm:text-center sm:text-lg md:text-2xl'>
                   STEP 2
                 </h4>
-                <h3 className='m-10 sm:text-5xl mt-5 font-semi-bold text-center'>
+                <h3 className='m-10 sm:text-4xl md:text-5xl mt-5 font-semi-bold text-center'>
                   Reach{' '}
                   <span className='pixel-font font-normal'>
                     target audience{' '}
@@ -124,7 +124,7 @@ const Slider = () => {
                 <h4 className='mt-5 md:text-left sm:text-center sm:text-lg md:text-2xl'>
                   STEP 3
                 </h4>
-                <h3 className='m-10 sm:text-5xl mt-5 font-semi-bold text-center'>
+                <h3 className='m-10 sm:text-4xl md:text-5xl mt-5 font-semi-bold text-center'>
                   Highly effective and high{' '}
                   <span className='pixel-font font-normal'>
                     {' '}

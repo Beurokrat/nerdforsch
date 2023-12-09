@@ -14,7 +14,7 @@ const About = () => {
         <div className='w-full flex flex-col'>
             {/* About */}
           <div className='flex sm:flex-col md:flex-row pb-5 border-b-2 border-black'>
-            <div className='w-[60%]'>
+            <div className='md:w-[60%]'>
               <Reveal>
                 <h2 className='sm:text-3xl md:text-6xl font-semi-bold text-left pr-5 border-r-2 border-black mt-10 mb-10'>
                   What's mobile digital billboard advertising? Lorem ipsum dolor
@@ -22,11 +22,14 @@ const About = () => {
                 </h2>
               </Reveal>
             </div>
-            <div className='w-[40%] flex flex-col'>
-              <h2 className='sm:text-xl md:text-3xl font-bold text-left m-10'>
+            <div className='md:w-[40%] flex flex-col'>
+              <h2 className='sm:text-xl md:text-3xl font-bold text-left sm:mb-10 md:m-10'>
                 (We are social)
               </h2>
-              <div className='flex items-end h-full w-full'>
+              <div className="sm:block md:hidden sm:mb-10 clipped-corners overflow-hidden h-3/4 overflow-hidden">
+                <img src="/assets/img/crowd.jpg" alt="crowd" className=' w-full h-[450px] opacity-90 object-cover' />
+              </div>
+              <div className='flex items-end justify-between h-full w-full'>
                 <a
                   href='https://www.instagram.com/yourusername'
                   target='_blank'
@@ -57,20 +60,20 @@ const About = () => {
             </div>
           </div>
           {/* services */}
-          <div className='w-full flex flex-row mb-10 mt-10 border-b-2 border-black'>
-            <div className='w-1/3 mr-5 border-r-2 border-black mb-10'>
+          <div className='w-full flex sm:flex-col md:flex-row mb-10 md:mt-10 border-b-2 border-black'>
+            <div className='md:w-1/3 md:mr-5 md:border-r-2 border-black mb-10'>
               <h2 className='sm:text-3xl font-bold text-left m-10 ml-0'>
                 (Services)
               </h2>
-              <div className="clipped-corners overflow-hidden h-3/4 pr-10 overflow-hidden">
-                <img src="/assets/img/crowd.jpg" alt="crowd" className='w-full h-[450px] opacity-90 object-cover' />
+              <div className="sm:hidden md:block clipped-corners overflow-hidden h-3/4 pr-10 overflow-hidden">
+                <img src="/assets/img/crowd.jpg" alt="crowd" className=' w-full h-[450px] opacity-90 object-cover' />
               </div>
             </div>
-            <div className='w-2/3 flex flex-col'>
-              <div className='flex border-b-2 border-black flex-row m-10 '>
-                <div className='w-1/2 pr-5 border-r-2 border-black mb-12'>
+            <div className='md:w-2/3 flex flex-col'>
+              <div className='flex md:border-b-2 border-black sm:flex-col md:flex-row md:m-10 '>
+                <div className='md:w-1/2 md:pr-5 md:border-r-2 border-black mb-12'>
                   <Reveal>
-                    <h2 className='sm:text-5xl font-bold text-left mb-10'>
+                    <h2 className='md:text-5xl sm:text-4xl font-bold text-left mb-10'>
                       Marketing
                     </h2>
                   </Reveal>
@@ -82,9 +85,9 @@ const About = () => {
                     </p>
                   </Reveal>
                 </div>
-                <div className='w-1/2 pl-10'>
+                <div className='md:w-1/2 md:mb-10 md:pl-10'>
                   <Reveal>
-                    <h2 className='sm:text-5xl font-bold text-left mb-10'>
+                    <h2 className='md:text-5xl sm:text-4xl font-bold text-left mb-10'>
                       Advertisement
                     </h2>
                   </Reveal>
@@ -97,9 +100,9 @@ const About = () => {
                   </Reveal>
                 </div>
               </div>
-              <div className='mt-0 m-10'>
+              <div className='sm:mt-10 sm:mb-10 md:mt-0 md:m-10'>
                 <Reveal>
-                <h2 className='sm:text-5xl font-bold text-left mb-10'>
+                <h2 className='md:text-5xl sm:text-4xl font-bold text-left mb-10'>
                   Interaction Design
                 </h2>
                 </Reveal>

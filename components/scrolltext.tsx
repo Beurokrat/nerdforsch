@@ -14,7 +14,7 @@ const ScrollText = () => {
           trigger: el.current,
           start: 'top 70%',
           end: 'bottom top',
-          scrub: 2,
+          scrub: 1.5,
         },
       });
     }

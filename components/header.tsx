@@ -14,7 +14,7 @@ const Header = () => {
             Nerdforsch.
           </Link>
         </h2>
-        <div className="flex flex-row text-white">
+        <div className="sm:hidden md:flex flex-row text-white">
           <span className='p-5 text-lg'>Home</span>
           <span className='p-5 text-lg'>About</span>
           <span className='p-5 text-lg'>Services</span>

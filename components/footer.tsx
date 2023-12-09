@@ -33,10 +33,10 @@ const Footer = () => {
     <footer className='footer border-t border-neutral-200 bg-black text-gray-200'>
       <Container>
         <div className='pt-10 flex sm:flex-col md:flex-row  items-center'>
-            <img src='/assets/img/logo-astro.png' className='w-1/4' alt='' />
-          <div className='flex float-right p-10 sm:w-full bg-black shadow-xl rounded-3xl bg-opacity-30 backdrop-blur-lg backdrop-filter'>
+            <img src='/assets/img/logo-astro.png' className='md:w-1/4 sm:w-1/2' alt='' />
+          <div className='flex float-right sm:p5 sm:mb-10 md:p-10 sm:w-full bg-black shadow-xl rounded-3xl bg-opacity-30 backdrop-blur-lg backdrop-filter'>
             <div className='m-5 mr-auto w-full'>
-              <h1 className='text-3xl pb-4 font-semi-bold tracking-tighter leading-tight lg:text-left'>
+              <h1 className='sm:text-xl md:text-3xl pb-4 font-semi-bold tracking-tighter leading-tight lg:text-left'>
                 Nerdforsch Labs pvt. ltd.
               </h1>
               <p className='sm:text-xs md:text-xl'>Ten Square Building,</p>
