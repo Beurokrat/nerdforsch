@@ -34,7 +34,7 @@ const About = () => {
                   href='https://www.instagram.com/yourusername'
                   target='_blank'
                   rel='noopener noreferrer'
-                  className='m-5 ml-10 flex items-center justify-center bg-black rounded-full p-2 w-12 h-12'
+                  className='md:m-5 md:ml-10 flex items-center justify-center bg-black rounded-full md:p-2 w-12 h-12'
                 >
                   <FontAwesomeIcon icon={faInstagram} className='text-white' />
                 </a>
@@ -43,7 +43,7 @@ const About = () => {
                   href='https://www.linkedin.com/in/yourusername'
                   target='_blank'
                   rel='noopener noreferrer'
-                  className='m-5 flex items-center justify-center bg-black rounded-full p-2 w-12 h-12'
+                  className='md:m-5 md:ml-10 flex items-center justify-center bg-black rounded-full md:p-2 w-12 h-12'
                 >
                   <FontAwesomeIcon icon={faLinkedinIn} className='text-white' />
                 </a>
@@ -52,7 +52,7 @@ const About = () => {
                   href='https://wa.me/yourphonenumber'
                   target='_blank'
                   rel='noopener noreferrer'
-                  className='m-5 flex items-center justify-center bg-black rounded-full p-2 w-12 h-12'
+                  className='md:m-5 md:ml-10 flex items-center justify-center bg-black rounded-full md:p-2 w-12 h-12'
                 >
                   <FontAwesomeIcon icon={faWhatsapp} className='text-white' />
                 </a>
