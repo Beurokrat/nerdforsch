@@ -5,6 +5,7 @@ import {
   faLinkedinIn,
   faWhatsapp,
 } from '@fortawesome/free-brands-svg-icons';
+import Reveal from './anim/reveal';
 
 const About = () => {
   return (
@@ -12,15 +13,17 @@ const About = () => {
       <Container>
         <div className='w-full flex flex-col'>
             {/* About */}
-          <div className='flex flex-row pb-5 border-b-2 border-black'>
+          <div className='flex sm:flex-col md:flex-row pb-5 border-b-2 border-black'>
             <div className='w-[60%]'>
-              <h2 className='sm:text-6xl font-semi-bold text-left pr-5 border-r-2 border-black mt-10 mb-10'>
-                What's mobile digital billboard advertising? Lorem ipsum dolor
-                sit amet consectetur adipisicing elit.
-              </h2>
+              <Reveal>
+                <h2 className='sm:text-3xl md:text-6xl font-semi-bold text-left pr-5 border-r-2 border-black mt-10 mb-10'>
+                  What's mobile digital billboard advertising? Lorem ipsum dolor
+                  sit amet consectetur adipisicing elit.
+                </h2>
+              </Reveal>
             </div>
             <div className='w-[40%] flex flex-col'>
-              <h2 className='sm:text-3xl font-bold text-left m-10'>
+              <h2 className='sm:text-xl md:text-3xl font-bold text-left m-10'>
                 (We are social)
               </h2>
               <div className='flex items-end h-full w-full'>
@@ -59,44 +62,60 @@ const About = () => {
               <h2 className='sm:text-3xl font-bold text-left m-10 ml-0'>
                 (Services)
               </h2>
+              <div className="clipped-corners overflow-hidden h-3/4 pr-10 overflow-hidden">
+                <img src="/assets/img/crowd.jpg" alt="crowd" className='w-full h-[450px] opacity-90 object-cover' />
+              </div>
             </div>
             <div className='w-2/3 flex flex-col'>
               <div className='flex border-b-2 border-black flex-row m-10 '>
                 <div className='w-1/2 pr-5 border-r-2 border-black mb-12'>
-                  <h2 className='sm:text-5xl font-bold text-left mb-10'>
-                    Marketing
-                  </h2>
-                  <p className='text-xl'>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Sed omnis, corporis error laborum sit, unde perferendis a
-                    veritati sperferendis a veritatis
-                  </p>
+                  <Reveal>
+                    <h2 className='sm:text-5xl font-bold text-left mb-10'>
+                      Marketing
+                    </h2>
+                  </Reveal>
+                  <Reveal>
+                    <p className='text-xl'>
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                      Sed omnis, corporis error laborum sit, unde perferendis a
+                      veritati sperferendis a veritatis
+                    </p>
+                  </Reveal>
                 </div>
                 <div className='w-1/2 pl-10'>
-                  <h2 className='sm:text-5xl font-bold text-left mb-10'>
-                    Advertisement
-                  </h2>
-                  <p className='text-xl'>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Sed omnis, corporis error laborum sit, unde perferendis a
-                    veritati sperferendis a veritatis
-                  </p>
+                  <Reveal>
+                    <h2 className='sm:text-5xl font-bold text-left mb-10'>
+                      Advertisement
+                    </h2>
+                  </Reveal>
+                  <Reveal>
+                    <p className='text-xl'>
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                      Sed omnis, corporis error laborum sit, unde perferendis a
+                      veritati sperferendis a veritatis
+                    </p>
+                  </Reveal>
                 </div>
               </div>
               <div className='mt-0 m-10'>
+                <Reveal>
                 <h2 className='sm:text-5xl font-bold text-left mb-10'>
                   Interaction Design
                 </h2>
+                </Reveal>
+                <Reveal>
                 <p className='text-xl'>
                   involves crafting how users interact with a product or system.
                   It focuses on creating intuitive, meaningful, and efficient
                   interactions between users and digital interfaces, ensuring a
                   seamless and satisfying user experience.
                 </p>
+                </Reveal>
               </div>
             </div>
           </div>
           {/* FAQ */}
+          
         </div>
       </Container>
     </section>

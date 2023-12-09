@@ -33,25 +33,24 @@ const Footer = () => {
     <footer className='footer border-t border-neutral-200 bg-black text-gray-200'>
       <Container>
         <div className='pt-10 flex sm:flex-col md:flex-row  items-center'>
-          <div className='p-10 sm:w-full md:w-1/2'>
-            <img src='/assets/img/logo-astro.png' className='w-full' alt='' />
-            <div className='m-5 w-full'>
-              <h1 className='text-2xl pb-4 font-semi-bold tracking-tighter leading-tight lg:text-left'>
+            <img src='/assets/img/logo-astro.png' className='w-1/4' alt='' />
+          <div className='flex float-right p-10 sm:w-full bg-black shadow-xl rounded-3xl bg-opacity-30 backdrop-blur-lg backdrop-filter'>
+            <div className='m-5 mr-auto w-full'>
+              <h1 className='text-3xl pb-4 font-semi-bold tracking-tighter leading-tight lg:text-left'>
                 Nerdforsch Labs pvt. ltd.
               </h1>
-              <p className='sm:text-xs md:text-base'>Ten Square Building,</p>
-              <p className='sm:text-xs md:text-base'>NH-47 ,Ernakulam</p>
-              <p className='sm:text-xs md:text-base'>Kerala, India</p>
+              <p className='sm:text-xs md:text-xl'>Ten Square Building,</p>
+              <p className='sm:text-xs md:text-xl'>NH-47 ,Ernakulam</p>
+              <p className='sm:text-xs md:text-xl'>Kerala, India</p>
             </div>
           </div>
-          <div className='hidden md:flex flex-col w-1/2'>
+          {/* <div className='hidden md:flex flex-col w-1/2'>
             <h1 className='md:text-5xl pb-4 font-semi-bold tracking-tighter leading-tight lg:text-left'>
               Let's talk ..{' '}
             </h1>
             <div className=' w-full h-full m-5 rounded-2xl shadow-md top-0 bg-gray-400 bg-opacity-10 z-30 backdrop-blur-lg backdrop-filter'>
-              <ContactForm />
             </div>
-          </div>
+          </div> */}
         </div>
         <div className='flex flex-row w-full justify-between pb-5'>
           <p className='sm:text-xs md:text-base'>Privacy Policy</p>

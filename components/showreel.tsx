@@ -2,6 +2,7 @@
 
 import { useRef } from 'react';
 import { gsap } from 'gsap';
+import Reveal from './anim/reveal';
 
 export default function ShowReel() {
   const el = useRef<HTMLDivElement>(null);
@@ -18,17 +19,19 @@ export default function ShowReel() {
         </div>
         <div className='md:col-span-2 md:row-start-4 sm:row-start-5 sm:pt-5 sm:pb-0 items-center'>
           <h4 className='mt-5 md:text-left sm:text-lg md:text-2xl'>
-              INTRODUCING
-            </h4>
-          <h1 className='pt-2 sm:text-4xl md:text-8xl font-bold tracking-tighter leading-tight md:pr-8'>
-            {/* Your <span className='text-red-600'>advertisement</span> is now in motion. */}
-            {/* 👋 .. hello !<br></br> */}
-            PIXEL-WHEEL
-          </h1>
+            INTRODUCING
+          </h4>
+          <Reveal>
+            <h1 className='pt-2 sm:text-4xl md:text-8xl font-bold tracking-tighter leading-tight md:pr-8'>
+              {/* Your <span className='text-red-600'>advertisement</span> is now in motion. */}
+              {/* 👋 .. hello !<br></br> */}
+              PIXEL-WHEEL
+            </h1>
+          </Reveal>
         </div>
         <div className='md:col-start-3 md:row-start-4 sm:row-start-6 h-full items-center'>
-        <h3 className='md:text-left sm:text-xl md:text-3xl'>
-        <b>Advertisement</b> is now in motion_
+          <h3 className='md:text-left sm:text-xl md:text-3xl'>
+            <b>Advertisement</b> is now in motion_
           </h3>
           {/* <h4 className=' md:text-left sm:pt-4 sm:text-xl md:text-2xl md:mt-5 md:pl-4 md:pt-12'>
             <b>Advertisement</b> is now in motion_

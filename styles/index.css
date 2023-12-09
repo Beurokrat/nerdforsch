@@ -112,9 +112,23 @@ body {
       0% 100%,
       0% 6rem);
 }
-/* h1 {
-  font-family: 'Play', sans-serif;
-} */
+.clipped-corners-sm {
+  clip-path: polygon(calc(0% + 4rem) 0%,
+      100% 0%,
+      100% calc(100% - 4rem),
+      calc(100% - 4rem) 100%,
+      0% 100%,
+      0% 4rem);
+}
+.progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background: rgb(188, 0, 0);
+  transform-origin: 0%;
+}
 .sliderBg {
   background-image: url('/assets/img/bg/9793.webp');
   /* background-image: url('/assets/img/bg/footer-bg.png'); */

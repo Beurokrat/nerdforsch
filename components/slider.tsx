@@ -84,7 +84,7 @@ const Slider = () => {
                 <h4 className='md:mt-5 md:text-left sm:text-center sm:text-lg md:text-2xl'>
                   STEP 1
                 </h4>
-                <h3 className='m-10 sm:text-3xl mt-5 font-semi-bold text-center'>
+                <h3 className='m-10 sm:text-5xl mt-5 font-semi-bold text-center'>
                   Featuring new era of{' '}
                   <span className='pixel-font font-normal'>
                     offline advertising.
@@ -93,7 +93,7 @@ const Slider = () => {
                 <div className='mt-10 mb-6 w-full flex justify-center'>
                   <iframe src='https://lottie.host/embed/0b268750-b9aa-4873-9824-325f2860f5df/N4dN131tkJ.json'></iframe>
                 </div>
-                <p className='md:m-10 pr-8 pl-8 sm:text-base md:text-lg text-center'>
+                <p className='md:m-10 pr-8 pl-8 sm:text-base md:text-xl text-center'>
                   It's like traditional billboards, but our ads move! We put
                   high-res LED screens on trucks or trailers that showcase
                   eye-catching ads on the go.
@@ -103,7 +103,7 @@ const Slider = () => {
                 <h4 className='mt-5 md:text-left sm:text-center sm:text-lg md:text-2xl'>
                   STEP 2
                 </h4>
-                <h3 className='m-10 sm:text-3xl mt-5 font-semi-bold text-center'>
+                <h3 className='m-10 sm:text-5xl mt-5 font-semi-bold text-center'>
                   Reach{' '}
                   <span className='pixel-font font-normal'>
                     target audience{' '}
@@ -113,7 +113,7 @@ const Slider = () => {
                 <div className='mt-10 w-full flex justify-center'>
                   <iframe src='https://lottie.host/embed/b92c9b73-a66c-41e2-8316-0839ade0adab/WjYlh7uyrd.json'></iframe>
                 </div>
-                <p className='md:m-10 pr-8 pl-8 sm:text-base md:text-lg text-center'>
+                <p className='md:m-10 pr-8 pl-8 sm:text-base md:text-xl text-center'>
                   We offer top-notch visibility, dynamic content,
                   cost-effectiveness, brand exposure, geo-targeting,
                   multi-location campaigns, and even exclusivity. It's a smart
@@ -124,7 +124,7 @@ const Slider = () => {
                 <h4 className='mt-5 md:text-left sm:text-center sm:text-lg md:text-2xl'>
                   STEP 3
                 </h4>
-                <h3 className='m-10 sm:text-3xl mt-5 font-semi-bold text-center'>
+                <h3 className='m-10 sm:text-5xl mt-5 font-semi-bold text-center'>
                   Highly effective and high{' '}
                   <span className='pixel-font font-normal'>
                     {' '}
@@ -135,7 +135,7 @@ const Slider = () => {
                 <div className='mt-10 w-full flex justify-center'>
                   <iframe src='https://lottie.host/embed/bdc55841-4b5e-42b4-b26d-c4240932c806/1R5ptStbtm.json'></iframe>
                 </div>
-                <p className='md:m-10 pr-8 pl-8 sm:text-base md:text-lg text-center'>
+                <p className='md:m-10 pr-8 pl-8 sm:text-base md:text-xl text-center'>
                   From static images and videos to animations, slideshows,
                   countdowns, and QR codes, we've got plenty of creative options
                   to engage your audience.
