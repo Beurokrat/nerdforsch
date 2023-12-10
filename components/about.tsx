@@ -28,7 +28,7 @@ const About = () => {
               </h2>
               <div className='sm:block md:hidden sm:mb-10 clipped-corners overflow-hidden h-3/4 overflow-hidden'>
                 <img
-                  src='/assets/img/crowd.jpg'
+                  src='/assets/img/crowd.webp'
                   alt='crowd'
                   className=' w-full h-[450px] opacity-90 object-cover'
                 />
@@ -66,7 +66,7 @@ const About = () => {
               </h2>
               <div className='sm:hidden md:block clipped-corners overflow-hidden h-3/4 pr-10 overflow-hidden'>
                 <img
-                  src='/assets/img/crowd.jpg'
+                  src='/assets/img/crowd.webp'
                   alt='crowd'
                   className=' w-full h-[450px] opacity-90 object-cover'
                 />

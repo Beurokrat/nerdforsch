@@ -114,7 +114,7 @@ const FAQ = () => {
               </h2>
               <div className='md:m-10 clipped-corners-sm overflow-hidden mt-10 overflow-hidden'>
                 <img
-                  src='/assets/img/holder.jpg'
+                  src='/assets/img/holder.webp'
                   alt='crowd'
                   className='w-full h-full opacity-90 object-cover'
                 />
