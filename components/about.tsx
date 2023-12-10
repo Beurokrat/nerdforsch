@@ -1,10 +1,4 @@
 import Container from './container';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {
-  faInstagram,
-  faLinkedinIn,
-  faWhatsapp,
-} from '@fortawesome/free-brands-svg-icons';
 import Reveal from './anim/reveal';
 
 const About = () => {
