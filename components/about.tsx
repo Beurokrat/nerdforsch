@@ -16,7 +16,7 @@ const About = () => {
           <div className='flex sm:flex-col md:flex-row pb-5 border-b-2 border-black'>
             <div className='md:w-[60%]'>
               <Reveal>
-                <h2 className='sm:text-3xl md:text-6xl font-semi-bold text-left pr-5 border-r-2 border-black mt-10 mb-10'>
+                <h2 className='sm:text-3xl md:text-6xl text-left pr-5 border-r-2 border-black mt-10 mb-10'>
                   Elevate brand visibility affordably with Pixel Wheels'
                   impactful outdoor digital advertisements.
                 </h2>
@@ -37,21 +37,21 @@ const About = () => {
                 <a
                   href='https://www.linkedin.com/company/nerdforsch-labs'
                   target='_blank'
-                  className='md:ml-10 flex items-center justify-center md:p-2 w-12 h-12'
+                  className='md:ml-10 flex items-center justify-center sm:p-2 w-12 h-12'
                 >
                   <img src='\assets\img\icons\linkdin.svg' alt='linkdIn' />
                 </a>
                 <a
                   href='https://www.instagram.com/pixelwheel_nfl/'
                   target='_blank'
-                  className='md:ml-10 flex items-center justify-center md:p-2 w-12 h-12'
+                  className='md:ml-10 flex items-center justify-center sm:p-2 w-12 h-12'
                 >
                   <img src='\assets\img\icons\instagram.svg' alt='instagram' />
                 </a>
                 <a
                   href='https://www.facebook.com/profile.php?id=61553184518919&sk=about'
                   target='_blank'
-                  className='md:ml-10 flex items-center justify-center md:p-2 w-12 h-12'
+                  className='md:ml-10 flex items-center justify-center sm:p-2 w-12 h-12'
                 >
                   <img src='\assets\img\icons\facebook.svg' alt='facebook' />
                 </a>
