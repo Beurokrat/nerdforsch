@@ -12,13 +12,13 @@ const About = () => {
     <section className='mt-12'>
       <Container>
         <div className='w-full flex flex-col'>
-            {/* About */}
+          {/* About */}
           <div className='flex sm:flex-col md:flex-row pb-5 border-b-2 border-black'>
             <div className='md:w-[60%]'>
               <Reveal>
                 <h2 className='sm:text-3xl md:text-6xl font-semi-bold text-left pr-5 border-r-2 border-black mt-10 mb-10'>
-                  What's mobile digital billboard advertising? Lorem ipsum dolor
-                  sit amet consectetur adipisicing elit.
+                  Elevate brand visibility affordably with Pixel Wheels'
+                  impactful outdoor digital advertisements.
                 </h2>
               </Reveal>
             </div>
@@ -26,35 +26,34 @@ const About = () => {
               <h2 className='sm:text-xl md:text-3xl font-bold text-left sm:mb-10 md:m-10'>
                 (We are social)
               </h2>
-              <div className="sm:block md:hidden sm:mb-10 clipped-corners overflow-hidden h-3/4 overflow-hidden">
-                <img src="/assets/img/crowd.jpg" alt="crowd" className=' w-full h-[450px] opacity-90 object-cover' />
+              <div className='sm:block md:hidden sm:mb-10 clipped-corners overflow-hidden h-3/4 overflow-hidden'>
+                <img
+                  src='/assets/img/crowd.jpg'
+                  alt='crowd'
+                  className=' w-full h-[450px] opacity-90 object-cover'
+                />
               </div>
-              <div className='flex items-end justify-between h-full w-full'>
+              <div className='flex items-end justify-center h-full w-full'>
                 <a
-                  href='https://www.instagram.com/yourusername'
+                  href='https://www.linkedin.com/company/nerdforsch-labs'
                   target='_blank'
-                  rel='noopener noreferrer'
-                  className='md:m-5 md:ml-10 flex items-center justify-center bg-black rounded-full md:p-2 w-12 h-12'
+                  className='md:ml-10 flex items-center justify-center md:p-2 w-12 h-12'
                 >
-                  <FontAwesomeIcon icon={faInstagram} className='text-white' />
+                  <img src='\assets\img\icons\linkdin.svg' alt='linkdIn' />
                 </a>
-
                 <a
-                  href='https://www.linkedin.com/in/yourusername'
+                  href='https://www.instagram.com/pixelwheel_nfl/'
                   target='_blank'
-                  rel='noopener noreferrer'
-                  className='md:m-5 md:ml-10 flex items-center justify-center bg-black rounded-full md:p-2 w-12 h-12'
+                  className='md:ml-10 flex items-center justify-center md:p-2 w-12 h-12'
                 >
-                  <FontAwesomeIcon icon={faLinkedinIn} className='text-white' />
+                  <img src='\assets\img\icons\instagram.svg' alt='instagram' />
                 </a>
-
                 <a
-                  href='https://wa.me/yourphonenumber'
+                  href='https://www.facebook.com/profile.php?id=61553184518919&sk=about'
                   target='_blank'
-                  rel='noopener noreferrer'
-                  className='md:m-5 md:ml-10 flex items-center justify-center bg-black rounded-full md:p-2 w-12 h-12'
+                  className='md:ml-10 flex items-center justify-center md:p-2 w-12 h-12'
                 >
-                  <FontAwesomeIcon icon={faWhatsapp} className='text-white' />
+                  <img src='\assets\img\icons\facebook.svg' alt='facebook' />
                 </a>
               </div>
             </div>
@@ -65,8 +64,12 @@ const About = () => {
               <h2 className='sm:text-3xl font-bold text-left m-10 ml-0'>
                 (Services)
               </h2>
-              <div className="sm:hidden md:block clipped-corners overflow-hidden h-3/4 pr-10 overflow-hidden">
-                <img src="/assets/img/crowd.jpg" alt="crowd" className=' w-full h-[450px] opacity-90 object-cover' />
+              <div className='sm:hidden md:block clipped-corners overflow-hidden h-3/4 pr-10 overflow-hidden'>
+                <img
+                  src='/assets/img/crowd.jpg'
+                  alt='crowd'
+                  className=' w-full h-[450px] opacity-90 object-cover'
+                />
               </div>
             </div>
             <div className='md:w-2/3 flex flex-col'>
@@ -79,9 +82,9 @@ const About = () => {
                   </Reveal>
                   <Reveal>
                     <p className='text-xl'>
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                      Sed omnis, corporis error laborum sit, unde perferendis a
-                      veritati sperferendis a veritatis
+                      Drive brand impact with strategic mobile billboard
+                      campaigns. Tailored strategies for maximum exposure and
+                      engagement.
                     </p>
                   </Reveal>
                 </div>
@@ -93,32 +96,31 @@ const About = () => {
                   </Reveal>
                   <Reveal>
                     <p className='text-xl'>
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                      Sed omnis, corporis error laborum sit, unde perferendis a
-                      veritati sperferendis a veritatis
+                      Dynamic LED screens on mobile billboards. Captivate
+                      audiences with immersive, high-resolution displays. Stand
+                      out and make an impression.
                     </p>
                   </Reveal>
                 </div>
               </div>
               <div className='sm:mt-10 sm:mb-10 md:mt-0 md:m-10'>
                 <Reveal>
-                <h2 className='md:text-5xl sm:text-4xl font-bold text-left mb-10'>
-                  Interaction Design
-                </h2>
+                  <h2 className='md:text-5xl sm:text-4xl font-bold text-left mb-10'>
+                    Interaction Design
+                  </h2>
                 </Reveal>
                 <Reveal>
-                <p className='text-xl'>
-                  involves crafting how users interact with a product or system.
-                  It focuses on creating intuitive, meaningful, and efficient
-                  interactions between users and digital interfaces, ensuring a
-                  seamless and satisfying user experience.
-                </p>
+                  <p className='text-xl'>
+                    At Pixel Wheels, we craft seamless and engaging interactions
+                    between your audience and our mobile billboard interfaces.
+                    Our focus is on creating intuitive, high-impact experiences
+                    that effortlessly connect viewers with your brand message.
+                  </p>
                 </Reveal>
               </div>
             </div>
           </div>
           {/* FAQ */}
-          
         </div>
       </Container>
     </section>
