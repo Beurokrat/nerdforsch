@@ -72,7 +72,7 @@ const Slider = () => {
         <div className='flex flex-col'>
           <div className='h-fit flex flex-row w-full justify-between '>
             <h4 className='mt-5 md:text-left sm:text-sm md:text-2xl'>
-              ABOUT US
+              NERDFORSCH LABS
             </h4>
             <h4 className='mt-5 md:text-left sm:text-sm md:text-2xl text-right'>
               ESTD. 2023
@@ -82,7 +82,7 @@ const Slider = () => {
             <div className='md:m-5 md:w-1/2 flex justify-center flex-col relative'>
               <div className='w-full slide absolute top-0 left-0'>
                 <h4 className='md:mt-5 md:text-left sm:text-center sm:text-lg md:text-2xl'>
-                  STEP 1
+                  Innovation
                 </h4>
                 <h3 className='m-10 sm:text-4xl md:text-5xl mt-5 font-semi-bold text-center'>
                   Featuring new era of{' '}
@@ -94,14 +94,15 @@ const Slider = () => {
                   <iframe src='https://lottie.host/embed/0b268750-b9aa-4873-9824-325f2860f5df/N4dN131tkJ.json'></iframe>
                 </div>
                 <p className='md:m-10 pr-8 pl-8 sm:text-base md:text-xl text-center'>
-                  It's like traditional billboards, but our ads move! We put
-                  high-res LED screens on trucks or trailers that showcase
-                  eye-catching ads on the go.
+                  Experience the future of advertising with Pixel Wheels—a
+                  revolution in offline marketing. Our mobile billboards
+                  redefine tradition, innovating street-level engagement for
+                  maximum brand impact.
                 </p>
               </div>
               <div className='w-full slide'>
                 <h4 className='mt-5 md:text-left sm:text-center sm:text-lg md:text-2xl'>
-                  STEP 2
+                  Captivate
                 </h4>
                 <h3 className='m-10 sm:text-4xl md:text-5xl mt-5 font-semi-bold text-center'>
                   Reach{' '}
@@ -114,15 +115,14 @@ const Slider = () => {
                   <iframe src='https://lottie.host/embed/b92c9b73-a66c-41e2-8316-0839ade0adab/WjYlh7uyrd.json'></iframe>
                 </div>
                 <p className='md:m-10 pr-8 pl-8 sm:text-base md:text-xl text-center'>
-                  We offer top-notch visibility, dynamic content,
-                  cost-effectiveness, brand exposure, geo-targeting,
-                  multi-location campaigns, and even exclusivity. It's a smart
-                  way to stand out!
+                  Engage your audience with Pixel Wheels' eye-catching tech. Our
+                  mobile billboards ensure effective messaging to your target
+                  audience, boosting brand visibility and engagement.
                 </p>
               </div>
               <div className='w-full slide absolute top-0 left-0'>
                 <h4 className='mt-5 md:text-left sm:text-center sm:text-lg md:text-2xl'>
-                  STEP 3
+                  Convert
                 </h4>
                 <h3 className='m-10 sm:text-4xl md:text-5xl mt-5 font-semi-bold text-center'>
                   Highly effective and high{' '}
@@ -136,28 +136,29 @@ const Slider = () => {
                   <iframe src='https://lottie.host/embed/bdc55841-4b5e-42b4-b26d-c4240932c806/1R5ptStbtm.json'></iframe>
                 </div>
                 <p className='md:m-10 pr-8 pl-8 sm:text-base md:text-xl text-center'>
-                  From static images and videos to animations, slideshows,
-                  countdowns, and QR codes, we've got plenty of creative options
-                  to engage your audience.
+                  FOur mobile billboards deliver unparalleled effectiveness,
+                  ensuring your message resonates and drives conversions.
+                  Elevate your advertising game with our high-performance,
+                  result-oriented solutions.
                 </p>
               </div>
-          <div
-            className='sm:m-8 bg-gray-800 flex rounded-lg'
-            style={{ zIndex: '20' }}
-          >
-            <button
-              className='pixel-font md:text-2xl mx-auto md:pd-4 p-1 pr-3 pl-3'
-              onClick={() => prevSlide()}
-            >
-              Prev
-            </button>
-            <button
-              className='pixel-font md:text-2xl mx-auto md:pd-4 p-1 pr-3 pl-3'
-              onClick={() => nextSlide()}
-            >
-              Next
-            </button>
-          </div>
+              <div
+                className='sm:m-8 bg-gray-800 flex rounded-lg'
+                style={{ zIndex: '20' }}
+              >
+                <button
+                  className='pixel-font md:text-2xl w-full mx-auto md:pd-4 p-1 pr-3 pl-3'
+                  onClick={() => prevSlide()}
+                >
+                  Prev
+                </button>
+                <button
+                  className='pixel-font md:text-2xl w-full mx-auto md:pd-4 p-1 pr-3 pl-3'
+                  onClick={() => nextSlide()}
+                >
+                  Next
+                </button>
+              </div>
             </div>
           </div>
         </div>

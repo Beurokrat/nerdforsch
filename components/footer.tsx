@@ -27,8 +27,8 @@ const Footer = () => {
               <h1 className='sm:text-xl md:text-3xl pb-4 font-semi-bold tracking-tighter leading-tight lg:text-left'>
                 Nerdforsch Labs pvt. ltd.
               </h1>
-              <p className='sm:text-xs md:text-xl'>Ten Square Building,</p>
-              <p className='sm:text-xs md:text-xl'>NH-47 ,Ernakulam</p>
+              <p className='sm:text-xs md:text-xl'>Putheekal Building,</p>
+              <p className='sm:text-xs md:text-xl'>Near Kala Auditorium, Kothamangalam</p>
               <p className='sm:text-xs md:text-xl'>Kerala, India</p>
             </div>
           </div>
