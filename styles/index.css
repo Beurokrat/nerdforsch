@@ -81,7 +81,7 @@ p {
 }
 
 body {
-  background-image: url('/assets/img/bg.png');
+  background-image: url('/assets/img/bg.webp');
   /* Replace 'your-image.jpg' with your image URL */
   background-repeat: repeat;
   /* Repeat the image both vertically and horizontally */
@@ -99,7 +99,7 @@ body {
   background-position: center;
 }
 .footer {
-  background-image: url('/assets/img/bg/footer-bg.png');
+  background-image: url('/assets/img/bg/footer-bg.webp');
   background-size: cover;
   background-position: center;
 }
@@ -130,8 +130,9 @@ body {
   transform-origin: 0%;
 }
 .sliderBg {
-  background-image: url('/assets/img/bg/9793.webp');
-  /* background-image: url('/assets/img/bg/footer-bg.png'); */
+  background-image: url('/assets/img/bg/footer-bg.webp');
+  /* background-image: url('/assets/img/bg/9793.webp'); */
+  /* background-image: url('/assets/img/bg/footer-bg.webp'); */
   background-size: cover;
   background-position: center;
 }

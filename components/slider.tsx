@@ -143,7 +143,7 @@ const Slider = () => {
                 </p>
               </div>
               <div
-                className='sm:m-8 bg-gray-800 flex rounded-lg'
+                className='sm:m-8 shadow-md bg-gray-600 bg-opacity-30 z-30 backdrop-blur-lg backdrop-filter flex rounded-lg'
                 style={{ zIndex: '20' }}
               >
                 <button
