@@ -67,7 +67,7 @@ const Slider = () => {
     };
   }, []);
   return (
-    <section className='sliderBg text-gray-200 overflow-hidden'>
+    <section className='mt-10 sliderBg text-gray-200 overflow-hidden'>
       <Container>
         <div className='flex flex-col'>
           <div className='h-fit flex flex-row w-full justify-between '>

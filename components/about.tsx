@@ -1,10 +1,4 @@
 import Container from './container';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {
-  faInstagram,
-  faLinkedinIn,
-  faWhatsapp,
-} from '@fortawesome/free-brands-svg-icons';
 import Reveal from './anim/reveal';
 
 const About = () => {
@@ -64,13 +58,13 @@ const About = () => {
               <h2 className='sm:text-3xl font-bold text-left m-10 ml-0'>
                 (Services)
               </h2>
-              <div className='sm:hidden md:block clipped-corners overflow-hidden h-3/4 pr-10 overflow-hidden'>
+              {/* <div className='sm:hidden md:block clipped-corners overflow-hidden h-3/4 pr-10 overflow-hidden'>
                 <img
                   src='/assets/img/crowd.webp'
                   alt='crowd'
                   className=' w-full h-[450px] opacity-90 object-cover'
                 />
-              </div>
+              </div> */}
             </div>
             <div className='md:w-2/3 flex flex-col'>
               <div className='flex md:border-b-2 border-black sm:flex-col md:flex-row md:m-10 '>
