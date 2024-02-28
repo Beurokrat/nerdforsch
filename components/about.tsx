@@ -20,13 +20,13 @@ const About = () => {
               <h2 className='sm:text-xl md:text-3xl font-bold text-left sm:mb-10 md:m-10'>
                 (We are social)
               </h2>
-              <div className='sm:block md:hidden sm:mb-10 clipped-corners overflow-hidden h-3/4 overflow-hidden'>
+              {/* <div className='sm:block md:hidden sm:mb-10 clipped-corners overflow-hidden h-3/4 overflow-hidden'>
                 <img
                   src='/assets/img/crowd.webp'
                   alt='crowd'
                   className=' w-full h-[450px] opacity-90 object-cover'
                 />
-              </div>
+              </div> */}
               <div className='flex items-end justify-center h-full w-full'>
                 <a
                   href='https://www.linkedin.com/company/nerdforsch-labs'
