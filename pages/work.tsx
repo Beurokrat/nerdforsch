@@ -13,11 +13,15 @@ const Work = () => {
             <div className='w-full'>
               <ImageGrid />
             </div>
-            <div className='w-full'>
-              <SuggestedCarousel />
-            </div>
           </div>
         </Container>
+      </section>
+      <section className='mt-20 mb-20 pt-5'>
+        <div className='w-full'>
+          <Container>
+            <SuggestedCarousel />
+          </Container>
+        </div>
       </section>
     </Layout>
   );

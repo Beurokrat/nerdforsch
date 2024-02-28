@@ -15,18 +15,36 @@ const CURSOR_SIZE = 80
 
 const articles = [
   {
+    image : "/assets/img/pw_img_1.png",
     title:
-      "Building a fully customisable carousel slider with swipe gestures and navigation using Framer Motion",
-    url: "https://medium.com/@jeyprox/building-a-fully-customisable-carousel-slider-with-swipe-gestures-navigation-and-custom-cursor-4e986ccbd08f",
+      "Company 1",
+    url: "",
   },
   {
+    image : "/assets/img/pw_img_2.jpg",
     title:
-      "Building a customisable Input component with NextJS, ReactHookForm, TailwindCSS and TypeScript",
-    url: "https://medium.com/@jeyprox/building-a-fully-customisable-input-component-with-nextjs-reacthookfrom-tailwindcss-and-ts-58874a2e3450",
+      "Perumal",
+    url: "",
   },
   {
-    title: "Handling Forms in NextJS with busboy, ReactHookForm and TypeScript",
-    url: "https://medium.com/@jeyprox/handling-forms-in-nextjs-with-busboy-reacthookform-and-ts-3f86c70545b3",
+    image : "/assets/img/pw_img_3.jpg",
+    title: "Kerala. Land of dreams !",
+    url: "",
+  },
+  {
+    image : "/assets/img/pw_img_3.jpg",
+    title: "Kerala. Land of dreams !",
+    url: "",
+  },
+  {
+    image : "/assets/img/pw_img_3.jpg",
+    title: "Kerala. Land of dreams !",
+    url: "",
+  },
+  {
+    image : "/assets/img/pw_img_3.jpg",
+    title: "Kerala. Land of dreams !",
+    url: "",
   },
 ]
 
@@ -184,8 +202,8 @@ export default function SuggestedCarousel() {
 
   return (
     <>
-      <div className="text-center m-20">
-        <div className="flex justify-center gap-4"> // links
+      <div className=" m-20">
+        <div className="flex  gap-4"> // links
           <Link
             className="text-sm underline underline-offset-2 hover:text-lime-300"
             href={"https://medium.com/@jeyprox"}
@@ -203,10 +221,10 @@ export default function SuggestedCarousel() {
             to the repo
           </Link>
         </div>
-        <h1 className="mt-2 text-6xl font-bold uppercase">
+        <h1 className="m-20 text-6xl font-bold uppercase">
           Framer Motion Carousel
         </h1>
-        <p className="text-sm text-gray-400">
+        <p className="m-20text-xl text-gray-400">
           only really works on desktop for now
         </p>
       </div>
@@ -277,7 +295,7 @@ export default function SuggestedCarousel() {
                   ref={(el) => (itemsRef.current[index] = el)}
                   className={cn(
                     "group relative shrink-0 select-none px-3 transition-opacity duration-300",
-                    !active && "opacity-30",
+                    !active && "opacity-90",
                   )}
                   transition={{
                     ease: "easeInOut",
@@ -301,6 +319,8 @@ export default function SuggestedCarousel() {
                         active ? "aspect-[5/3]" : "aspect-[4/3]",
                       )}
                     >
+                        <img src={article.image} alt="" />
+                    
                       <span
                         className={cn(
                           "text-xl font-bold",
@@ -336,7 +356,7 @@ export default function SuggestedCarousel() {
           </motion.ul>
           <button
             type="button"
-            className="group absolute left-[24%] top-1/3 z-20 grid aspect-square place-content-center rounded-full transition-colors"
+            className="group absolute left-[24%] bottom-0 z-20 grid aspect-square place-content-center rounded-full transition-colors"
             style={{
               width: CURSOR_SIZE,
               height: CURSOR_SIZE,
@@ -352,7 +372,7 @@ export default function SuggestedCarousel() {
           </button>
           <button
             type="button"
-            className="group absolute right-[24%] top-1/3 z-20 grid aspect-square place-content-center rounded-full transition-colors"
+            className="group absolute right-[24%] bottom-0 z-20 grid aspect-square place-content-center rounded-full transition-colors"
             style={{
               width: CURSOR_SIZE,
               height: CURSOR_SIZE,
