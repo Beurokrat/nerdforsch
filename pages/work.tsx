@@ -6,12 +6,12 @@ import MasonryGrid from '../components/image-carousal';
 
 const Work = () => {
   const images = [
-    "/assets/img/pw_img_1.png",
+    "/assets/img/pw_img_1.webp",
     "/assets/img/pw_img_2.jpg",
-    "/assets/img/pw_img_3.jpg",
-    "/assets/img/pw_img_4.jpg",
-    "/assets/img/pw_img_6.png",
-    "/assets/img/pw_img_5.jpg",
+    "/assets/img/pw_img_3.webp",
+    "/assets/img/pw_img_4.webp",
+    "/assets/img/pw_img_6.webp",
+    "/assets/img/pw_img_5.webp",
     "/assets/img/pw_img_2.jpg",
    ];
   return (
