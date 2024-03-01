@@ -1,393 +1,54 @@
-"use client"
+// components/MasonryGrid.tsx
 
-import { MouseEvent as ReactMouseEvent, useRef, useState } from "react"
-import Link from "next/link"
-import { motion, useMotionValue, useSpring, type PanInfo } from "framer-motion"
-import { MoveLeft, MoveRight } from "lucide-react"
+import React, { useState } from 'react';
 
-import { cn } from "../lib/utils"
+interface MasonryGridProps {
+  images: string[];
+}
 
-const START_INDEX = 1
-const DRAG_THRESHOLD = 150
-const FALLBACK_WIDTH = 509
+const MasonryGrid: React.FC<MasonryGridProps> = ({ images }) => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [selectedImage, setSelectedImage] = useState('');
 
-const CURSOR_SIZE = 80
+  const openModal = (image: string) => {
+    setSelectedImage(image);
+    setIsModalOpen(true);
+  };
 
-const articles = [
-  {
-    image : "/assets/img/pw_img_1.png",
-    title:
-      "Company 1",
-    url: "",
-  },
-  {
-    image : "/assets/img/pw_img_2.jpg",
-    title:
-      "Perumal",
-    url: "",
-  },
-  {
-    image : "/assets/img/pw_img_3.jpg",
-    title: "Kerala. Land of dreams !",
-    url: "",
-  },
-  {
-    image : "/assets/img/pw_img_3.jpg",
-    title: "Kerala. Land of dreams !",
-    url: "",
-  },
-  {
-    image : "/assets/img/pw_img_3.jpg",
-    title: "Kerala. Land of dreams !",
-    url: "",
-  },
-  {
-    image : "/assets/img/pw_img_3.jpg",
-    title: "Kerala. Land of dreams !",
-    url: "",
-  },
-]
-
-export default function SuggestedCarousel() {
-  const containerRef = useRef<HTMLUListElement>(null)
-  const itemsRef = useRef<(HTMLLIElement | null)[]>([])
-  const [activeSlide, setActiveSlide] = useState(START_INDEX)
-  const canScrollPrev = activeSlide > 0
-  const canScrollNext = activeSlide < articles.length - 1
-  const offsetX = useMotionValue(0)
-  const animatedX = useSpring(offsetX, {
-    damping: 20,
-    stiffness: 150,
-  })
-
-  const [isDragging, setIsDragging] = useState(false)
-  function handleDragSnap(
-    _: MouseEvent,
-    { offset: { x: dragOffset } }: PanInfo,
-  ) {
-    //reset drag state
-    setIsDragging(false)
-    containerRef.current?.removeAttribute("data-dragging")
-
-    //stop drag animation (rest velocity)
-    animatedX.stop()
-
-    const currentOffset = offsetX.get()
-
-    //snap back if not dragged far enough or if at the start/end of the list
-    if (
-      Math.abs(dragOffset) < DRAG_THRESHOLD ||
-      (!canScrollPrev && dragOffset > 0) ||
-      (!canScrollNext && dragOffset < 0)
-    ) {
-      animatedX.set(currentOffset)
-      return
-    }
-
-    let offsetWidth = 0
-    /*
-      - start searching from currently active slide in the direction of the drag
-      - check if the drag offset is greater than the width of the current item
-      - if it is, add/subtract the width of the next/prev item to the offsetWidth
-      - if it isn't, snap to the next/prev item
-    */
-    for (
-      let i = activeSlide;
-      dragOffset > 0 ? i >= 0 : i < itemsRef.current.length;
-      dragOffset > 0 ? i-- : i++
-    ) {
-      const item = itemsRef.current[i]
-      if (item === null) continue
-      const itemOffset = item.offsetWidth
-
-      const prevItemWidth =
-        itemsRef.current[i - 1]?.offsetWidth ?? FALLBACK_WIDTH
-      const nextItemWidth =
-        itemsRef.current[i + 1]?.offsetWidth ?? FALLBACK_WIDTH
-
-      if (
-        (dragOffset > 0 && //dragging left
-          dragOffset > offsetWidth + itemOffset && //dragged past item
-          i > 1) || //not the first/second item
-        (dragOffset < 0 && //dragging right
-          dragOffset < offsetWidth + -itemOffset && //dragged past item
-          i < itemsRef.current.length - 2) //not the last/second to last item
-      ) {
-        dragOffset > 0
-          ? (offsetWidth += prevItemWidth)
-          : (offsetWidth -= nextItemWidth)
-        continue
-      }
-
-      if (dragOffset > 0) {
-        //prev
-        offsetX.set(currentOffset + offsetWidth + prevItemWidth)
-        setActiveSlide(i - 1)
-      } else {
-        //next
-        offsetX.set(currentOffset + offsetWidth - nextItemWidth)
-        setActiveSlide(i + 1)
-      }
-      break
-    }
-  }
-
-  function scrollPrev() {
-    //prevent scrolling past first item
-    if (!canScrollPrev) return
-
-    const nextWidth = itemsRef.current
-      .at(activeSlide - 1)
-      ?.getBoundingClientRect().width
-    if (nextWidth === undefined) return
-    offsetX.set(offsetX.get() + nextWidth)
-
-    setActiveSlide((prev) => prev - 1)
-  }
-  function scrollNext() {
-    // prevent scrolling past last item
-    if (!canScrollNext) return
-
-    const nextWidth = itemsRef.current
-      .at(activeSlide + 1)
-      ?.getBoundingClientRect().width
-    if (nextWidth === undefined) return
-    offsetX.set(offsetX.get() - nextWidth)
-
-    setActiveSlide((prev) => prev + 1)
-  }
-
-  const [hoverType, setHoverType] = useState<"prev" | "next" | "click" | null>(
-    null,
-  )
-  const mouseX = useMotionValue(0)
-  const mouseY = useMotionValue(0)
-  const animatedHoverX = useSpring(mouseX, {
-    damping: 20,
-    stiffness: 400,
-    mass: 0.1,
-  })
-  const animatedHoverY = useSpring(mouseY, {
-    damping: 20,
-    stiffness: 400,
-    mass: 0.1,
-  })
-
-  function navButtonHover({
-    currentTarget,
-    clientX,
-    clientY,
-  }: ReactMouseEvent<HTMLButtonElement, MouseEvent>) {
-    const parent = currentTarget.offsetParent
-    if (!parent) return
-    const { left: parentLeft, top: parentTop } = parent.getBoundingClientRect()
-
-    const { left, top, width, height } = currentTarget.getBoundingClientRect()
-    const centerX = left + width / 2
-    const centerY = top + height / 2
-
-    const offsetFromCenterX = clientX - centerX
-    const offsetFromCenterY = clientY - centerY
-
-    mouseX.set(left - parentLeft + offsetFromCenterX / 4)
-    mouseY.set(top - parentTop + offsetFromCenterY / 4)
-  }
-
-  function disableDragClick(e: ReactMouseEvent<HTMLAnchorElement>) {
-    if (isDragging) {
-      e.preventDefault()
-      e.stopPropagation()
-    }
-  }
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
 
   return (
-    <>
-      <div className=" m-20">
-        <div className="flex  gap-4"> // links
-          <Link
-            className="text-sm underline underline-offset-2 hover:text-lime-300"
-            href={"https://medium.com/@jeyprox"}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            to the article
-          </Link>
-          <Link
-            className="text-sm underline underline-offset-2 hover:text-lime-300"
-            href={"https://github.com/jeyprox/framer-carousel"}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            to the repo
-          </Link>
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+      {images.map((image, index) => (
+        <div key={index} className="relative cursor-pointer" onClick={() => openModal(image)}>
+          <img src={image} alt={`Masonry item ${index}`} className="w-full h-full object-cover" />
         </div>
-        <h1 className="m-20 text-6xl font-bold uppercase">
-          Framer Motion Carousel
-        </h1>
-        <p className="m-20text-xl text-gray-400">
-          only really works on desktop for now
-        </p>
-      </div>
-      <div className="group container mx-6">
-        <motion.div
-          className={cn(
-            "pointer-events-none absolute z-10 opacity-0 transition-opacity duration-300 group-hover:opacity-100",
-          )}
-          style={{
-            width: CURSOR_SIZE,
-            height: CURSOR_SIZE,
-            x: animatedHoverX,
-            y: animatedHoverY,
-          }}
-        >
-          <motion.div
-            layout
-            className={cn(
-              "grid h-full place-items-center rounded-full bg-lime-300",
-              hoverType === "click" && "absolute inset-7 h-auto",
-            )}
-          >
-            <motion.span
-              layout="position"
-              className={cn(
-                "w-full select-none text-center font-medium uppercase text-gray-900",
-                (hoverType === "prev" || hoverType === "next") &&
-                  "absolute inset-x-0 top-2",
-                hoverType === "click" &&
-                  "absolute top-full mt-0.5 w-auto text-sm font-bold text-lime-300",
-              )}
-            >
-              {hoverType ?? "drag"}
-            </motion.span>
-          </motion.div>
-        </motion.div>
-        <div className="relative overflow-hidden">
-          <motion.ul
-            ref={containerRef}
-            className="flex cursor-none items-start"
-            style={{
-              x: animatedX,
-            }}
-            drag="x"
-            dragConstraints={{
-              left: -(FALLBACK_WIDTH * (articles.length - 1)),
-              right: FALLBACK_WIDTH,
-            }}
-            onMouseMove={({ currentTarget, clientX, clientY }) => {
-              const parent = currentTarget.offsetParent
-              if (!parent) return
-              const { left, top } = parent.getBoundingClientRect()
-              mouseX.set(clientX - left - CURSOR_SIZE / 2)
-              mouseY.set(clientY - top - CURSOR_SIZE / 2)
-            }}
-            onDragStart={() => {
-              containerRef.current?.setAttribute("data-dragging", "true")
-              setIsDragging(true)
-            }}
-            onDragEnd={handleDragSnap}
-          >
-            {articles.map((article, index) => {
-              const active = index === activeSlide
-              return (
-                <motion.li
-                  layout
-                  key={article.title}
-                  ref={(el) => (itemsRef.current[index] = el)}
-                  className={cn(
-                    "group relative shrink-0 select-none px-3 transition-opacity duration-300",
-                    !active && "opacity-90",
-                  )}
-                  transition={{
-                    ease: "easeInOut",
-                    duration: 0.4,
-                  }}
-                  style={{
-                    flexBasis: active ? "40%" : "30%",
-                  }}
-                >
-                  <Link
-                    href={article.url}
-                    className="block"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    draggable={false}
-                    onClick={disableDragClick}
-                  >
-                    <div
-                      className={cn(
-                        "grid place-content-center overflow-hidden rounded-lg bg-gray-900",
-                        active ? "aspect-[5/3]" : "aspect-[4/3]",
-                      )}
-                    >
-                        <img src={article.image} alt="" />
-                    
-                      <span
-                        className={cn(
-                          "text-xl font-bold",
-                          active && "text-lime-300",
-                        )}
-                      >
-                        {index}
-                      </span>
-                    </div>
-                  </Link>
-                  <div
-                    className={cn(
-                      "mt-4 flex justify-center",
-                      !active && "hidden",
-                    )}
-                  >
-                    <Link
-                      href={article.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="cursor-none text-xl font-bold leading-tight transition-colors group-hover:text-lime-300"
-                      draggable={false}
-                      onClick={disableDragClick}
-                      onMouseEnter={() => setHoverType("click")}
-                      onMouseLeave={() => setHoverType(null)}
-                    >
-                      {article.title}
-                    </Link>
+      ))}
+      {isModalOpen && (
+        <div className="md:mt-10 fixed z-10 inset-0 overflow-y-auto" aria-labelledby="modal-title" role="dialog" aria-modal="true">
+          <div className="flex items-center justify-center min-h-screen">
+            <div className="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity" aria-hidden="true"></div>
+            <div className="inline-block align-middle bg-black rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:w-1/2 sm:h-1/2">
+              <div className="bg-black px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
+                <div className="sm:flex sm:items-start">
+                  <div className="mt-3 text-center sm:mt-0 sm:ml-4 sm:text-left">
+                    <img src={selectedImage} alt="Selected" className="w-full h-auto" />
                   </div>
-                </motion.li>
-              )
-            })}
-          </motion.ul>
-          <button
-            type="button"
-            className="group absolute left-[24%] bottom-0 z-20 grid aspect-square place-content-center rounded-full transition-colors"
-            style={{
-              width: CURSOR_SIZE,
-              height: CURSOR_SIZE,
-            }}
-            onClick={scrollPrev}
-            disabled={!canScrollPrev}
-            onMouseEnter={() => setHoverType("prev")}
-            onMouseMove={(e) => navButtonHover(e)}
-            onMouseLeave={() => setHoverType(null)}
-          >
-            <span className="sr-only">Previous Guide</span>
-            <MoveLeft className="h-10 w-10 stroke-[1.5] transition-colors group-enabled:group-hover:text-gray-900 group-disabled:opacity-50" />
-          </button>
-          <button
-            type="button"
-            className="group absolute right-[24%] bottom-0 z-20 grid aspect-square place-content-center rounded-full transition-colors"
-            style={{
-              width: CURSOR_SIZE,
-              height: CURSOR_SIZE,
-            }}
-            onClick={scrollNext}
-            disabled={!canScrollNext}
-            onMouseEnter={() => setHoverType("next")}
-            onMouseMove={(e) => navButtonHover(e)}
-            onMouseLeave={() => setHoverType(null)}
-          >
-            <span className="sr-only">Next Guide</span>
-            <MoveRight className="h-10 w-10 stroke-[1.5] transition-colors group-enabled:group-hover:text-gray-900 group-disabled:opacity-50" />
-          </button>
+                </div>
+              </div>
+              <div className="bg-blackpx-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse">
+                <button type="button" className="mt-3 cursor-pointer sm:text-xl font-bold text-center sm:m-5 md:m-10 md:ml-auto p-2 md:px-5 border-2 border-white text-white" onClick={closeModal}>
+                  Close
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-    </>
-  )
-}
+      )}
+    </div>
+  );
+};
+
+export default MasonryGrid;
