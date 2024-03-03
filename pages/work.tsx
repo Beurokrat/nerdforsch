@@ -2,7 +2,8 @@ import React from 'react';
 import Layout from '../components/layout';
 import Container from '../components/container';
 import { ImageGrid } from '../components/image-gallery';
-import MasonryGrid from '../components/image-carousal';
+import MasonryGrid from '../components/masonry-grid';
+
 
 const Work = () => {
   const images = [
@@ -28,7 +29,7 @@ const Work = () => {
       <section className='mt-20 mb-20 pt-5'>
         <div className='w-full'>
           <Container>
-            <MasonryGrid images={images} />
+            <MasonryGrid/>
           </Container>
         </div>
       </section>
