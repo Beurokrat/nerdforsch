@@ -14,10 +14,10 @@ const Work = () => {
     "/assets/img/pw_img_6.webp",
     "/assets/img/pw_img_5.webp",
     "/assets/img/pw_img_2.jpg",
-   ];
+  ];
   return (
     <Layout>
-      <section className='bg-black text-white mt-20 pt-10'>
+      {/* <section className='bg-black text-white mt-20 pt-10'>
         <Container>
           <div className='flex justify-center flex-col'>
             <div className='w-full'>
@@ -25,11 +25,19 @@ const Work = () => {
             </div>
           </div>
         </Container>
-      </section>
-      <section className='mt-20 mb-20 pt-5'>
+      </section> */}
+      <section className='my-[200px] pt-5'>
         <div className='w-full'>
           <Container>
-            <MasonryGrid/>
+            <div className="flex sm:flex-col md:flex-row p-4 pb-8">
+              <div className="md:w-1/2">
+                Unveiling Our Latest Creations in Design and Innovation.
+              </div>
+              <div className="sm:mt-10 text-4xl md:w-1/2">
+              As a leading Digital-Out-Of-Home (DOOH) advertising platform, we offer dynamic canvas for anyone to share their stories. Empowering everyone to curate and amplify their reach. 
+              </div>
+            </div>
+            <MasonryGrid />
           </Container>
         </div>
       </section>
