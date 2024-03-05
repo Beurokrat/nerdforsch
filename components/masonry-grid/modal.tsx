@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import React from 'react'
 import { motion } from 'framer-motion'
+import ShowReel from '../showreel'
 interface Props { }
 
 function Modal({ selected, setSelected }) {
@@ -17,10 +18,18 @@ function Modal({ selected, setSelected }) {
                 className="w-full max-w-[700px] mx-auto my-20 px-8 cursor-default"
             >
                 <motion.div layoutId={`card-${selected.id}`}>
-                    <img src={selected.url} alt='gallery image' />
+                    {selected.video ?
+                        <div className='w-full bg-black m-auto sm:aspect-video relative'>
+                        <iframe
+                          src= {selected.url}
+                          className='pointer-events-none absolute inset-0 h-full w-full object-cover'
+                        />
+                      </div>
+                        :
+                        <img src={selected.url} alt='gallery image' />
+                    }
                 </motion.div>
                 <motion.div
-                    
                     initial={{
                         opacity: 0,
                         y: 50,
@@ -34,8 +43,8 @@ function Modal({ selected, setSelected }) {
                     }}
                     className="bg-white p-4"
                 >
-                    <h3 className='text-4xl'>{selected.title}</h3>
-                    <p className='text-xl'>{selected.description}</p>
+                    <h3 className='md:text-2xl'>{selected.title}</h3>
+                    <p className='md:text-md'>{selected.description}</p>
 
                 </motion.div>
             </div>
