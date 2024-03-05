@@ -20,7 +20,6 @@ function Modal({ selected, setSelected }) {
                     <img src={selected.url} alt='gallery image' />
                 </motion.div>
                 <motion.div
-                    
                     initial={{
                         opacity: 0,
                         y: 50,

@@ -14,7 +14,7 @@ const Work = () => {
     "/assets/img/pw_img_6.webp",
     "/assets/img/pw_img_5.webp",
     "/assets/img/pw_img_2.jpg",
-   ];
+  ];
   return (
     <Layout>
       <section className='bg-black text-white mt-20 pt-10'>
@@ -26,10 +26,18 @@ const Work = () => {
           </div>
         </Container>
       </section>
-      <section className='mt-20 mb-20 pt-5'>
+      <section className='my-[200px] pt-5'>
         <div className='w-full'>
           <Container>
-            <MasonryGrid/>
+            <div className="flex flex-row p-4 pb-8">
+              <div className="w-1/2">
+                VAŠE UTOČIŠTE, VAŠA PRIČA
+              </div>
+              <div className="text-4xl w-1/2">
+              Zakoračite u svoj jedinstveni dom, gdje se udobnost, luksuz i elegancija stapaju, stvarajući prostor gdje svaki trenutak postaje nezaboravan.
+              </div>
+            </div>
+            <MasonryGrid />
           </Container>
         </div>
       </section>
