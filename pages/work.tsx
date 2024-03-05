@@ -17,7 +17,7 @@ const Work = () => {
   ];
   return (
     <Layout>
-      <section className='bg-black text-white mt-20 pt-10'>
+      {/* <section className='bg-black text-white mt-20 pt-10'>
         <Container>
           <div className='flex justify-center flex-col'>
             <div className='w-full'>
@@ -25,16 +25,16 @@ const Work = () => {
             </div>
           </div>
         </Container>
-      </section>
+      </section> */}
       <section className='my-[200px] pt-5'>
         <div className='w-full'>
           <Container>
-            <div className="flex flex-row p-4 pb-8">
-              <div className="w-1/2">
-                VAŠE UTOČIŠTE, VAŠA PRIČA
+            <div className="flex sm:flex-col md:flex-row p-4 pb-8">
+              <div className="md:w-1/2">
+                Unveiling Our Latest Creations in Design and Innovation.
               </div>
-              <div className="text-4xl w-1/2">
-              Zakoračite u svoj jedinstveni dom, gdje se udobnost, luksuz i elegancija stapaju, stvarajući prostor gdje svaki trenutak postaje nezaboravan.
+              <div className="sm:mt-10 text-4xl md:w-1/2">
+              As a leading Digital-Out-Of-Home (DOOH) advertising platform, we offer dynamic canvas for anyone to share their stories. Empowering everyone to curate and amplify their reach. 
               </div>
             </div>
             <MasonryGrid />
