@@ -26,14 +26,14 @@ const Work = () => {
           </div>
         </Container>
       </section> */}
-      <section className='my-[200px] pt-5'>
+      <section className='sm:my-[100px] md:my-[200px] pt-5'>
         <div className='w-full'>
           <Container>
             <div className="flex sm:flex-col md:flex-row p-4 pb-8">
               <div className="md:w-1/2">
                 Unveiling Our Latest Creations in Design and Innovation.
               </div>
-              <div className="sm:mt-10 text-4xl md:w-1/2">
+              <div className="sm:mt-10 sm:text-2xl md:text-4xl md:w-1/2">
               As a leading Digital-Out-Of-Home (DOOH) advertising platform, we offer dynamic canvas for anyone to share their stories. Empowering everyone to curate and amplify their reach. 
               </div>
             </div>

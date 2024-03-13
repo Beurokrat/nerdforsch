@@ -39,7 +39,7 @@ export default function Index({ allPosts }: Props) {
                     <h1 className='pt-2 sm:text-8xl font-bold tracking-tighter leading-tight md:pr-8'>
                       {/* Your <span className='text-red-600'>advertisement</span> is now in motion. */}
                       {/* 👋 .. hello !<br></br> */}
-                      PIXEL-WHEEL
+                      PIXEL WHEEL
                     </h1>
                     <h3 className='mt-10 md:text-left sm:text-xl md:text-3xl'>
                       <b>Advertisement</b> is now in motion_
