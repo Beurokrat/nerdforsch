@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import Container from './container';
 import { motion, useScroll } from "framer-motion";
+import Navbar from './navigation/navbar';
 
 const Header = () => {
   const { scrollYProgress } = useScroll();
@@ -14,12 +15,13 @@ const Header = () => {
             Nerdforsch.
           </Link>
         </h2>
-        <div className="sm:hidden md:flex flex-row text-gray-700">
+        <Navbar />
+        {/* <div className="sm:hidden md:flex flex-row text-gray-700">
           <Link href='/work' className='p-5 text-lg'>Work</Link>
           <span className='p-5 text-lg'>Company</span>
           <span className='p-5 text-lg'>Services</span>
           <span className='p-5 text-lg'>Contact</span>
-        </div>
+        </div> */}
         </div>
       </Container>
     </header>
