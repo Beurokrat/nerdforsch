@@ -1,12 +1,9 @@
 'use client';
 
 import { useRef } from 'react';
-import { gsap } from 'gsap';
-import Reveal from './anim/reveal';
 
 export default function ShowReel({videoLink}) {
   const el = useRef<HTMLDivElement>(null);
-  console.log("----- vdoe ", videoLink)
   return (
     <section ref={el}>
       <div className='grid flex w-full sm:pt-20'>

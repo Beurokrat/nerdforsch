@@ -1,11 +1,12 @@
 .menu{
     height: 100vh;
-    background-color: rgb(41, 41, 41);
+    // background-color: rgb(41, 41, 41);
+    background-color: #acacac;
     position: fixed;
     right: 0;
     top: 0;
     z-index: -1;
-    color: white;
+    color: #000000;
 
     .body{
         box-sizing: border-box;
@@ -23,8 +24,8 @@
             margin-top: 80px;
 
             .header{
-                color: rgb(153, 153, 153);
-                border-bottom: 1px solid rgb(153, 153, 153);
+                color: #000000;
+                border-bottom: 1px solid #000000;
                 text-transform: uppercase;
                 font-size: 11px;
                 margin-bottom: 40px;
@@ -32,7 +33,7 @@
 
             a{
                 text-decoration: none;
-                color: white;
+                color: #000000;
                 font-weight: 300;
             }
             
