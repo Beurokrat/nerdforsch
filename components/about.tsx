@@ -20,12 +20,7 @@ const About = () => {
               <h2 className='sm:text-xl md:text-3xl font-bold text-left sm:mb-10 md:m-10'>
                 (We are social)
               </h2>
-              <div className='sm:block md:hidden sm:mb-10 clipped-corners overflow-hidden h-3/4 overflow-hidden'>
-                <img
-                  src='/assets/img/crowd.webp'
-                  alt='crowd'
-                  className=' w-full h-[450px] opacity-90 object-cover'
-                />
+              <div className='sm:block md:hidden sm:mb-10 clipped-corners overflow-hidden h-3/4'>
               </div>
               <div className='flex items-end justify-center h-full w-full'>
                 <a
@@ -58,13 +53,6 @@ const About = () => {
               <h2 className='sm:text-3xl font-bold text-left m-10 ml-0'>
                 (Services)
               </h2>
-              {/* <div className='sm:hidden md:block clipped-corners overflow-hidden h-3/4 pr-10 overflow-hidden'>
-                <img
-                  src='/assets/img/crowd.webp'
-                  alt='crowd'
-                  className=' w-full h-[450px] opacity-90 object-cover'
-                />
-              </div> */}
             </div>
             <div className='md:w-2/3 flex flex-col'>
               <div className='flex md:border-b-2 border-black sm:flex-col md:flex-row md:m-10 '>
