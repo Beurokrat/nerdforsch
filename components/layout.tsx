@@ -1,3 +1,5 @@
+'use_client';
+import { useEffect } from 'react'
 import Alert from './alert'
 import Footer from './footer'
 import Header from './header'

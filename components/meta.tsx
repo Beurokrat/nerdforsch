@@ -32,11 +32,10 @@ const Meta = () => {
       <meta name="msapplication-config" content="/favicon/browserconfig.xml" />
       <meta name="theme-color" content="#000" />
       <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
-      <meta
-        name="description"
-        content={`A statically generated blog example using Next.js and ${CMS_NAME}.`}
-      />
-      <meta property="og:image" content={HOME_OG_IMAGE_URL} />
+ 
+      <meta name="description" content="Pixel Wheels: Revolutionizing Outdoor Advertising with Innovative Mobile Billboards"/>
+      <meta name="keywords" content="Pixel Wheels, Outdoor Advertising, Mobile Billboards, Innovation"/>
+      <meta property="og:image" content='/assets/img/meta.png' />
     </Head>
   )
 }
