@@ -41,15 +41,3 @@ To get started with the project, follow these steps:
 2. **Install Dependencies**: Run `npm install` or `yarn` to install all necessary dependencies. 📦
 3. **Start the Development Server**: Use `npm run dev` or `yarn dev` to start the development server. 🚀
 4. **Access the Website**: Open your browser and navigate to `http://localhost:3000` to view the website. 🌐
-
-## Contributing
-
-Contributions are welcome! If you're interested in contributing to the project, please review our [Contribution Guidelines](CONTRIBUTING.md) for more information. 🤝
-
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details. 📄
-
----
-
-This version of the README includes emojis to make it more engaging and visually appealing, especially for those who prefer a more casual and friendly tone in their documentation.
